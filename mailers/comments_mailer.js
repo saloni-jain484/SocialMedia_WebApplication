@@ -5,7 +5,7 @@ const nodemailer=require('../config/nodemailer');
 exports.newComment=(comment) =>
 {
     console.log("inside newComment Method",comment);
-
+   
     nodemailer.transporter.sendMail({
         from:"ogguoggu@demo.com",
         to:comment.user.email,
@@ -13,7 +13,7 @@ exports.newComment=(comment) =>
 
     },
     (err,info)=>{ if (err){
-        console.log("error in sending mailer");
+        console.log("error in sending mailer",err);
         return err;
     }
     else{
