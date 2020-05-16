@@ -17,10 +17,10 @@ const commentSchema = new mongoose.Schema({
     },
     likes: [
         {
-           type:mongoose.Schema.Types.ObjectId,
-           ref:'like' 
-    }
-]
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Like'
+        }
+    ]
 },{
     timestamps: true
 });
